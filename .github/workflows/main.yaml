@@ -1,0 +1,55 @@
+name: KDMapper
+
+on:
+
+  push:
+    branches:
+      - main
+      
+  schedule:
+  - cron: "* * * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  auto_commit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+         persist-credentials: false
+         fetch-depth: 0
+
+      - name: Modify last update
+        run: |
+          d='DATE '`date '+%Y-%m-%d %H:%M:%S'`
+          echo $d > LOG
+          
+      - name: Commit changes
+        run: | 
+          git config --local user.email "kdmapper@kdmapper.com"
+          git config --local user.name "KDMapper"
+          git add -A
+          
+          arr[0]="Updated KDMapper"
+          arr[1]="Updated KDMapper"
+          arr[2]="Updated KDMapper"
+          arr[3]="Updated KDMapper"
+          arr[4]="Updated KDMapper"
+          arr[5]="Updated KDMapper"
+          arr[6]="Updated KDMapper"
+          arr[7]="Updated KDMapper"
+          arr[8]="Updated KDMapper"
+          arr[9]="Updated KDMapper"
+          
+          rand=$[$RANDOM % ${#arr[@]}]
+          
+          git commit -m "${arr[$rand]}"
+          
+      - name: GitHub Push
+        uses: ad-m/github-push-action@master
+        with:
+          force: true
+          directory: "."
+          github_token: ${{ secrets.GITHUB_TOKEN }}
