@@ -12,12 +12,12 @@
 </p>
   
 <p align="center">
-  Hi, I'm Frank 👋 I'm a 🚀 English developer 🚀 I ❤️ Happy Hardcore ❤️, I have created the program ``KDMapper`` to bypass the system .sys signed requirements. ✨
+  Hi, I'm Frank 👋 I'm a 🚀 English developer 🚀 I ❤️ Happy Hardcore ❤️, I have created the program "KDMapper" to bypass the system .sys signed requirements. ✨
 </p>
 
 <p align="center">(<a href="#readme-top">Back to top</a>)</p>
 
-<p align="center">🌠 **KDMapper** is an DLL mapper made in C++!</p>
+<p align="center">🌠 KDMapper is an DLL mapper made in C++!</p>
 <p align="center">❤️ How it works is that it exploits the intel driver iqvw64e.sys to manually map non-signed drivers in memory.</p>
 
 ## ❤️ Roadmap
